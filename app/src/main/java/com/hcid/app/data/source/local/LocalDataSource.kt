@@ -4,8 +4,11 @@ import com.hcid.app.data.source.local.article.ArticleDao
 import com.hcid.app.data.source.local.article.ArticleEntity
 import com.hcid.app.data.source.local.product.ProductDao
 import com.hcid.app.data.source.local.product.ProductEntity
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class LocalDataSource (
+@Singleton
+class LocalDataSource @Inject constructor(
     private val articleDao: ArticleDao,
     private val productDao: ProductDao,
     private val preference:PreferenceHelper

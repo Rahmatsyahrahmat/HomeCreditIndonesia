@@ -5,8 +5,9 @@ import com.hcid.app.domain.entity.Article
 import com.hcid.app.domain.entity.Product
 import com.hcid.app.domain.repository.HomeRepository
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
-class HomeUseCaseImpl(private val homeRepository: HomeRepository):HomeUseCase {
+class HomeUseCaseImpl @Inject constructor(private val homeRepository: HomeRepository):HomeUseCase {
     override fun getArticleSectionTitle(): Flow<Resource<String>> =
         homeRepository.getArticleSectionTitle()
 

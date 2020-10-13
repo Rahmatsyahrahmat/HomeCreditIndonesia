@@ -14,8 +14,11 @@ import com.hcid.app.domain.entity.Product
 import com.hcid.app.domain.repository.HomeRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class HomeRepositoryImpl(private val local:LocalDataSource,private val remote:RemoteDataSource) : HomeRepository{
+@Singleton
+class HomeRepositoryImpl @Inject constructor(private val local:LocalDataSource,private val remote:RemoteDataSource) : HomeRepository{
 
     override fun getArticleSectionTitle(): Flow<Resource<String>> =
         object :NetworkBoundResource<String,String>(){

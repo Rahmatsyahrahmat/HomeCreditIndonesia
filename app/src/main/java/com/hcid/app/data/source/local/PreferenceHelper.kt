@@ -2,7 +2,9 @@ package com.hcid.app.data.source.local
 
 import android.content.Context
 import com.hcid.app.R
+import javax.inject.Singleton
 
+@Singleton
 class PreferenceHelper(private val context: Context) {
 
     private val preference = context.getSharedPreferences(context.getString(R.string.app_name),Context.MODE_PRIVATE)
