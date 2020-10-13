@@ -1,4 +1,4 @@
-package com.hcid.app.ui
+package com.hcid.app.ui.home
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
