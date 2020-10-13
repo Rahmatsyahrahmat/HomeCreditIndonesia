@@ -8,6 +8,7 @@ import com.hcid.app.data.source.remote.response.ProductResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -24,6 +25,8 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService){
             }else{
                 emit(ApiResponse.Success(GsonHelper.toObjectListOf(response,ArticleResponse::class.java)))
             }
+        }catch (e:IOException){
+            emit(ApiResponse.Error("No Internet Connection"))
         }catch (e:Exception){
             emit(ApiResponse.Error(e.message.toString()))
         }
@@ -40,6 +43,8 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService){
             }else{
                 emit(ApiResponse.Success(GsonHelper.toObjectListOf(response,ProductResponse::class.java)))
             }
+        }catch (e:IOException){
+            emit(ApiResponse.Error("No Internet Connection"))
         }catch (e:Exception){
             emit(ApiResponse.Error(e.message.toString()))
         }
@@ -55,6 +60,8 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService){
             }else{
                 emit(ApiResponse.Success(response))
             }
+        }catch (e:IOException){
+            emit(ApiResponse.Error("No Internet Connection"))
         }catch (e:Exception){
             emit(ApiResponse.Error(e.message.toString()))
         }
