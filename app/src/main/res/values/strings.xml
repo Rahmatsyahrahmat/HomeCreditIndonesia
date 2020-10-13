@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Home Credit Indonesia</string>
+    <string name="articleSectionPreferences">article_section_preferences</string>
 </resources>
