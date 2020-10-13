@@ -4,4 +4,5 @@
     <string name="product_image">product_image</string>
     <string name="sample_item_text">Android</string>
     <string name="article_image">article_image</string>
+    <string name="article">Article</string>
 </resources>

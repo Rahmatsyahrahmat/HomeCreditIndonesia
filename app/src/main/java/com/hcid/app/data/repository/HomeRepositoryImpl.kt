@@ -23,9 +23,7 @@ class HomeRepositoryImpl @Inject constructor(private val local:LocalDataSource,p
     override fun getArticleSectionTitle(): Flow<Resource<String>> =
         object :NetworkBoundResource<String,String>(){
             override fun loadFromDB(): Flow<String> =
-                flow {
-                    local.getArticleSectionTitle()
-                }
+                local.getArticleSectionTitle()
 
             override fun shouldFetch(data: String?): Boolean =
                 data.isNullOrEmpty()

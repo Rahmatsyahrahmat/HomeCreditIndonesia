@@ -11,7 +11,7 @@ import javax.inject.Singleton
 class LocalDataSource @Inject constructor(
     private val articleDao: ArticleDao,
     private val productDao: ProductDao,
-    private val preference:PreferenceHelper
+    private val preferences:PreferencesHelper
 ){
 
     fun getAllArticles() = articleDao.selectAllArticles()
@@ -22,8 +22,8 @@ class LocalDataSource @Inject constructor(
 
     suspend fun insertProducts(products:List<ProductEntity>) = productDao.insertProducts(products)
 
-    fun getArticleSectionTitle() = preference.getArticleSectionTitle()
+    fun getArticleSectionTitle() = preferences.getArticleSectionTitle()
 
-    fun setArticleSectionTitle(title:String) = preference.setArticleSectionTitle(title)
+    suspend fun setArticleSectionTitle(title:String) = preferences.setArticleSectionTitle(title)
 
 }

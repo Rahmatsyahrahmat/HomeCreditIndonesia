@@ -3,7 +3,7 @@ package com.hcid.app.data.di
 import android.content.Context
 import androidx.room.Room
 import com.hcid.app.data.source.local.AppDatabase
-import com.hcid.app.data.source.local.PreferenceHelper
+import com.hcid.app.data.source.local.PreferencesHelper
 import com.hcid.app.data.source.local.article.ArticleDao
 import com.hcid.app.data.source.local.product.ProductDao
 import dagger.Module
@@ -34,6 +34,6 @@ class DatabaseModule {
     fun provideProductDao(database:AppDatabase):ProductDao = database.productDao()
 
     @Provides
-    fun providePreference(@ApplicationContext context: Context):PreferenceHelper = PreferenceHelper(context)
+    fun providePreference(@ApplicationContext context: Context):PreferencesHelper = PreferencesHelper(context)
 
 }
