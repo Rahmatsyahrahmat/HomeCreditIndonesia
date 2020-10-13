@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Home Credit Indonesia</string>
     <string name="articleSectionPreferences">article_section_preferences</string>
+    <string name="product_image">product_image</string>
+    <string name="sample_item_text">Android</string>
+    <string name="article_image">article_image</string>
 </resources>

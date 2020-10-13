@@ -1,7 +1,7 @@
-package com.hcid.app.presenter
+package com.hcid.app.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.hcid.app.R
 
 class HomeActivity : AppCompatActivity() {

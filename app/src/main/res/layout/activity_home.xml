@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presenter.HomeActivity">
+    tools:context=".ui.HomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/homeProductContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="@dimen/margin10dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="@dimen/margin20dp"
+        android:layout_marginRight="@dimen/margin20dp"
+        android:layout_marginTop="@dimen/margin20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeProductList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/view_item_product"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:itemCount="6"
+            android:layout_marginBottom="@dimen/margin20dp"
+            android:layout_marginStart="@dimen/margin10dp"
+            android:layout_marginLeft="@dimen/margin10dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/homeArticleSectionTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/textTitleSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeProductContainer"
+        android:layout_marginLeft="@dimen/margin20dp"
+        android:layout_marginTop="@dimen/margin20dp"
+        android:layout_marginRight="@dimen/margin20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeArticleList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/view_item_article"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeArticleSectionTitle"
+        android:layout_marginLeft="@dimen/margin15dp"
+        android:layout_marginRight="@dimen/margin15dp"
+        android:layout_marginTop="@dimen/margin5dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
