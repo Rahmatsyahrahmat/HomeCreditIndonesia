@@ -27,6 +27,8 @@ buildscript {
 
     ext.datastore_preferences_version = "1.0.0-alpha01"
 
+    ext.shimmer_version = "0.5.0"
+
     repositories {
         google()
         jcenter()

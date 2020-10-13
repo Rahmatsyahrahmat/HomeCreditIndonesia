@@ -71,4 +71,7 @@ dependencies {
     // Preferences DataStore
     implementation "androidx.datastore:datastore-preferences:$datastore_preferences_version"
 
+    //shimmer
+    implementation "com.facebook.shimmer:shimmer:$shimmer_version"
+
 }

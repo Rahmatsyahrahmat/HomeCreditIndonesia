@@ -29,6 +29,17 @@
             tools:itemCount="6"
             android:layout_marginBottom="@dimen/margin20dp" />
 
+        <include
+            android:id="@+id/homeProductsShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/shimmer_products_home"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/margin20dp"
+            android:visibility="invisible"/>
+
     </androidx.cardview.widget.CardView>
 
 
@@ -36,7 +47,6 @@
         android:id="@+id/homeArticleSectionTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         android:textSize="@dimen/textTitleSize"
@@ -45,7 +55,19 @@
         app:layout_constraintTop_toBottomOf="@id/homeProductContainer"
         android:layout_marginLeft="@dimen/margin20dp"
         android:layout_marginTop="@dimen/margin20dp"
-        android:layout_marginRight="@dimen/margin20dp"/>
+        android:layout_marginRight="@dimen/margin20dp" />
+
+    <include
+        android:id="@+id/homeArticleSectionTitleShimmer"
+        layout="@layout/shimmer_article_title_home"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/homeArticleSectionTitle"
+        app:layout_constraintBottom_toBottomOf="@id/homeArticleSectionTitle"
+        android:layout_marginLeft="@dimen/margin20dp"
+        android:layout_marginStart="@dimen/margin20dp"
+        android:visibility="invisible"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeArticleList"
@@ -57,6 +79,22 @@
         app:layout_constraintTop_toBottomOf="@id/homeArticleSectionTitle"
         android:layout_marginLeft="@dimen/margin15dp"
         android:layout_marginRight="@dimen/margin15dp"
-        android:layout_marginTop="@dimen/margin5dp"/>
+        android:layout_marginTop="@dimen/margin5dp"
+        android:paddingBottom="@dimen/margin15dp"
+        android:clipToPadding="false"/>
+
+    <include
+        android:id="@+id/homeArticlesShimmer"
+        layout="@layout/shimmer_articles_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeArticleSectionTitle"
+        android:layout_marginLeft="@dimen/margin15dp"
+        android:layout_marginRight="@dimen/margin15dp"
+        android:layout_marginTop="@dimen/margin5dp"
+        android:paddingBottom="@dimen/margin15dp"
+        android:visibility="invisible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

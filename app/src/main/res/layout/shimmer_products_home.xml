@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:shimmer_auto_start="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin5dp"
+        android:paddingRight="@dimen/margin5dp"
+        android:clipToPadding="false">
+
+        <TableRow
+            android:weightSum="3">
+            <include layout="@layout/shimmer_item_product"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5dp"
+                android:layout_marginRight="@dimen/margin5dp"/>
+            <include layout="@layout/shimmer_item_product"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5dp"
+                android:layout_marginRight="@dimen/margin5dp"/>
+            <include layout="@layout/shimmer_item_product"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5dp"
+                android:layout_marginRight="@dimen/margin5dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/margin10dp"
+            android:weightSum="3">
+            <include layout="@layout/shimmer_item_product"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5dp"
+                android:layout_marginRight="@dimen/margin5dp"/>
+            <include layout="@layout/shimmer_item_product"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5dp"
+                android:layout_marginRight="@dimen/margin5dp"/>
+            <include layout="@layout/shimmer_item_product"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5dp"
+                android:layout_marginRight="@dimen/margin5dp"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+</com.facebook.shimmer.ShimmerFrameLayout>
