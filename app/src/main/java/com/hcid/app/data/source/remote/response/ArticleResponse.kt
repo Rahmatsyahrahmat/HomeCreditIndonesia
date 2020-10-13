@@ -7,6 +7,5 @@ data class ArticleResponse(
     val title:String,
     @SerializedName("article_image")
     val image:String,
-    @SerializedName("article_link")
     val link:String
 )

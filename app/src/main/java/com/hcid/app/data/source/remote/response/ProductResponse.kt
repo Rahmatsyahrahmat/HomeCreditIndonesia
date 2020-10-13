@@ -7,6 +7,5 @@ data class ProductResponse(
     val name:String,
     @SerializedName("product_image")
     val image:String,
-    @SerializedName("product_link")
     val link:String
 )
