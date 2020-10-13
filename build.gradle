@@ -25,6 +25,8 @@ buildscript {
 
     ext.activity_ktx_version = "1.1.0"
 
+    ext.datastore_preferences_version = "1.0.0-alpha01"
+
     repositories {
         google()
         jcenter()

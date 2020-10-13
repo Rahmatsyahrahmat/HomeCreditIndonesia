@@ -68,4 +68,7 @@ dependencies {
     kapt "androidx.hilt:hilt-compiler:$hilt_jetpack_version"
     kaptAndroidTest "androidx.hilt:hilt-compiler:$hilt_jetpack_version"
 
+    // Preferences DataStore
+    implementation "androidx.datastore:datastore-preferences:$datastore_preferences_version"
+
 }
