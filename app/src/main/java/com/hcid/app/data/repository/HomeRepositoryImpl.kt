@@ -42,7 +42,7 @@ class HomeRepositoryImpl @Inject constructor(private val local:LocalDataSource,p
                 local.getAllArticles().asArticles()
 
             override fun shouldFetch(data: List<Article>?): Boolean =
-                data.isNullOrEmpty()
+                true
 
             override suspend fun createCall(): Flow<ApiResponse<List<ArticleResponse>>> =
                  remote.getArticles()
