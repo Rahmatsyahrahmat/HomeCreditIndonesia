@@ -26,9 +26,9 @@
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="3"
             tools:itemCount="6"
-            android:paddingLeft="@dimen/margin10dp"
-            android:paddingRight="@dimen/margin10dp"
-            android:paddingBottom="@dimen/margin20dp"/>
+            android:layout_marginLeft="@dimen/margin10dp"
+            android:layout_marginRight="@dimen/margin10dp"
+            android:layout_marginBottom="@dimen/margin20dp"/>
 
         <include
             android:id="@+id/homeProductsShimmer"
@@ -38,9 +38,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:paddingLeft="@dimen/margin10dp"
-            android:paddingRight="@dimen/margin10dp"
-            android:paddingBottom="@dimen/margin20dp"
+            android:layout_marginLeft="@dimen/margin10dp"
+            android:layout_marginRight="@dimen/margin10dp"
+            android:layout_marginBottom="@dimen/margin20dp"
             android:visibility="invisible"/>
 
     </androidx.cardview.widget.CardView>
