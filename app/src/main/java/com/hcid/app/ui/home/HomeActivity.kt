@@ -32,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
         homeProductList.adapter = productAdapter
         homeArticleList.adapter = articleAdapter
 
-        viewModel.products.observe(this){resource->
+        viewModel.getProducts().observe(this){resource->
             when(resource){
                 is Resource.Success->{
                     resource.data?.let {
@@ -54,7 +54,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.articles.observe(this){resource->
+        viewModel.getArticles().observe(this){resource->
             when(resource){
                 is Resource.Success->{
                     resource.data?.let {
@@ -76,7 +76,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.articleSectionTitle.observe(this){resource->
+        viewModel.getArticleSectionTitle().observe(this){resource->
             when(resource){
                 is Resource.Success->{
                     homeArticleSectionTitle.text = resource.data

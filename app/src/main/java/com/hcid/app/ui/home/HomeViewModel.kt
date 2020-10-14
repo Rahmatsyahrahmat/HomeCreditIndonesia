@@ -9,8 +9,8 @@ import com.hcid.app.domain.entity.Article
 import com.hcid.app.domain.entity.Product
 import com.hcid.app.domain.usecase.HomeUseCase
 
-class HomeViewModel @ViewModelInject constructor(homeUseCase: HomeUseCase):ViewModel() {
-    val products:LiveData<Resource<List<Product>>> = homeUseCase.getListProducts().asLiveData()
-    val articles:LiveData<Resource<List<Article>>> = homeUseCase.getListArticles().asLiveData()
-    val articleSectionTitle:LiveData<Resource<String>> = homeUseCase.getArticleSectionTitle().asLiveData()
+class HomeViewModel @ViewModelInject constructor(private val homeUseCase: HomeUseCase):ViewModel() {
+    fun getProducts():LiveData<Resource<List<Product>>> = homeUseCase.getListProducts().asLiveData()
+    fun getArticles():LiveData<Resource<List<Article>>> = homeUseCase.getListArticles().asLiveData()
+    fun getArticleSectionTitle():LiveData<Resource<String>> = homeUseCase.getArticleSectionTitle().asLiveData()
 }
